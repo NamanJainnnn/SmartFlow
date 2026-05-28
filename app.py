@@ -5,6 +5,7 @@ from flask import Flask, request, jsonify, render_template
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+os.makedirs('uploads', exist_ok=True)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024  # 10MB max
 
